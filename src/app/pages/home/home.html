@@ -1,0 +1,95 @@
+<div class="flex flex-col items-center justify-center gap-20 mx-8 my-0 md:mx-16 md:gap-16 home lg:mx-24 xl:mx-36 pt-36">
+    <div class="bubble bg-[#CD5FF8] top-0 left-0"></div>
+    <div class="bubble bg-[#7D4B9F] bottom-0 right-0"></div>
+    <div class="bubble bg-[#9466B8] top-1/2 left-full"></div>
+
+    <div
+        class="flex flex-col items-center justify-between gap-6 md:flex-row top-sec lg:pb-20 md:pb-16 lg:pr-10 md:pr-6 sm:pr-3">
+        <div
+            class="flex flex-col items-center justify-center gap-6 p-3 sm:gap-10 sm:text-4xl md:gap-16 md:items-start left-sec">
+            <div class="flex flex-col items-center justify-center text-2xl md:items-start lg:gap-5 top-sec sm:text-3xl md:text-4xl">
+                <span>Hi There! <span class="inline-block animate-wave">👋</span></span>
+                <span>I'M <span class="text-[#CD5FF8]">RAUL RIVAS</span></span>
+            </div>
+
+            <!-- <div class="bottom-sec font-semibold text-[#CD5FF8]">
+                FULL STACK DEVELOPER
+            </div> -->
+
+            <div class="font-semibold text-[#CD5FF8] text-2xl md:text-4xl">
+                <span class="inline-block" [ngStyle]="{'min-width': longestLength + 'ch'}">
+                    {{ text }}
+                    <span class="blinking-cursor">|</span>
+                </span>
+            </div>
+
+
+
+        </div>
+
+        <div class="w-1/2 h-auto p-3 md:w-1/3 right-sec">
+            <img src="home-img.png" alt="" class="h-100 w-100">
+        </div>
+    </div>
+
+    <div
+        class="flex flex-col items-center justify-between gap-10 pb-5 sm:pb-10 md:flex-row md:items-start lg:gap-40 mid-sec">
+        <div class="flex flex-col items-start justify-center gap-10 md:gap-16 left-sec">
+            <div class="w-full text-3xl text-center sm:text-4xl md:text-5xl header">
+                LET ME INTRODUCE MYSELF
+            </div>
+
+            <div
+                class="flex flex-col items-start justify-center gap-6 text-lg text-justify sm:text-xl detail md:text-left">
+                <span>I'm a Full Stack developer having experience of over 7 years and I think… 🤷‍♂️</span>
+                <span>I am fluent in classics like <span class="text-[#CD5FF8] italic">React, Angular, Next and
+                        Vue.</span></span>
+                <span>My field of Interest's are building new <span class="text-[#CD5FF8] italic">Web Technologies and
+                        Products</span> and also in areas related to
+                    <span class="text-[#CD5FF8] italic">Blockchain</span>.</span>
+                <span>Whenever possible, I also apply my passion for developing products with <span
+                        class="text-[#CD5FF8] italic">Node.js</span> and <span class="text-[#CD5FF8] italic">Modern
+                        Javascript Library and Frameworks</span> like <span class="text-[#CD5FF8] italic">React.js and
+                        Next.js</span></span>
+            </div>
+        </div>
+
+        <div class="w-1/2 h-auto p-3 text-center xl:w-1/3 right-sec">
+            <img src="home-img2.svg" alt="" class="w-full h-auto">
+        </div>
+    </div>
+
+    <div class="flex flex-col items-center justify-center gap-10 px-10 pt-0 pb-20 md:pt-10 mid-sec">
+        <div class="flex flex-col items-center justify-center gap-3 tags">
+            <div class="text-2xl sm:text-4xl top-sec">
+                FIND ME ON
+            </div>
+
+            <div class="text-lg sm:text-xl mid-sec">
+                Feel free to <span class="text-[#CD5FF8]">connect</span> with me
+            </div>
+        </div>
+
+        <div class="flex items-center justify-between gap-6 text-sm icons">
+            <a href="https://github.com/raulrivas276" target="_blank" rel="noopener noreferrer"
+                class="py-2 px-[0.6rem] bg-white rounded-full cursor-pointer">
+                <fa-icon [icon]="faGithub" class="text-base self-center text-[#700C86]"></fa-icon>
+            </a>
+            <a href="https://x.com/" target="_blank" rel="noopener noreferrer"
+                class="py-2 px-[0.6rem] bg-white rounded-full cursor-pointer">
+                <fa-icon [icon]="faTwitter" class="text-base self-center text-[#700C86]"></fa-icon>
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"
+                class="py-2 px-[0.6rem] bg-white rounded-full cursor-pointer">
+                <fa-icon [icon]="faLinkedin" class="text-base self-center text-[#700C86]"></fa-icon>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
+                class="py-2 px-[0.6rem] bg-white rounded-full cursor-pointer">
+                <fa-icon [icon]="faInstagram" class="text-base self-center text-[#700C86]"></fa-icon>
+            </a>
+        </div>
+    </div>
+    <div class="typing-container">
+        <span class="typing-text" #typedElement></span>
+    </div>
+</div>

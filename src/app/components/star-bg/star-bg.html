@@ -1,0 +1,13 @@
+<div class="starfield z-0">
+  <span *ngFor="let star of stars"
+        class="star"
+        [ngClass]="star.animation"
+        [ngStyle]="{
+          top: star.top,
+          left: star.left,
+          width: star.size,
+          height: star.size,
+          opacity: star.opacity
+        }">
+  </span>
+</div>

@@ -1,0 +1,13 @@
+<!-- Full-page gradient wrapper -->
+<div class="min-h-screen bg-gradient-to-b from-[#14141B] to-[#181227] relative overflow-hidden">
+
+  <!-- Your navbar + routed content -->
+  <app-navbar></app-navbar>
+  <main class="relative z-10"> <!-- keep content above stars -->
+    <router-outlet></router-outlet>
+  </main>
+
+  <app-star-bg></app-star-bg>
+
+</div>
+<app-footer></app-footer>

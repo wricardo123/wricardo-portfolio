@@ -1,0 +1,126 @@
+<div class="flex flex-col items-center justify-center gap-16 pt-40 mx-6 my-0 md:mx-16 about lg:mx-24 xl:mx-36">
+
+    <div class="flex flex-col items-center justify-between gap-3 pb-10 md:items-start lg:gap-6 md:flex-row top-sec">
+        <div class="flex flex-col items-start justify-center gap-12 left-sec">
+            <div class="w-full text-2xl text-center md:text-3xl lg:text-4xl xl:text-5xl header">
+                KNOW WHO <span class="text-[#CD5FF8]">I'M</span>
+            </div>
+
+            <div
+                class="flex flex-col items-start justify-center gap-3 text-lg text-justify sm:text-xl md:text-left details">
+                <div class="">
+                    Hi Everyone, I am <span class="text-[#CD5FF8]">Raul Rivas</span> from <span class="text-[#CD5FF8]">New York, USA</span>.
+                </div>
+                <div class="">
+                    I'm a Full Stack developer having experience of over 7 years and have developed large scale web
+                    applications using Javascript ES5/ES6, JQuery, React, Vue and Angular,Node.js. I also worked on
+                    SQL,MySQL, PostgreSQL, GraphQL.
+                </div>
+                <div class="">
+                    Additionally, I am currently employed as a full stack developer at Assemble Inc.
+                </div>
+            </div>
+
+            <div
+                class="flex flex-col items-start justify-center gap-6 text-lg text-justify sm:text-xl md:text-left activites">
+                <div class="">
+                    Apart from coding, some other activities that I love to do!
+                </div>
+                <div class="flex flex-col items-start justify-start gap-2 ml-5">
+                    <div class="flex items-center justify-between gap-2 ">
+                        <fa-icon [icon]="faRocket"></fa-icon>
+                        <div class="">Playing Games</div>
+                    </div>
+                    <div class="flex items-center justify-between gap-2 ">
+                        <fa-icon [icon]="faRocket"></fa-icon>
+                        <div class="">Writing Tech Blogs</div>
+                    </div>
+                    <div class="flex items-center justify-between gap-2 ">
+                        <fa-icon [icon]="faRocket"></fa-icon>
+                        <div class="">Travelling</div>
+                    </div>
+                </div>
+            </div>
+            <div class="quote w-full self-center text-lg text-justify sm:text-xl detail md:text-left text-[#CD5FF8]">
+                <div class="flex flex-col items-center justify-center gap-3">
+                    <div class="">"Strive to build things that make a difference!"
+                    </div>
+                    <div class="">- Raul Rivas</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full h-auto p-3 right-sec">
+            <img src="about-img.png" alt="" class="w-full h-auto">
+        </div>
+    </div>
+
+    <div class="flex flex-col items-center justify-center gap-6 py-10 skillset">
+        <div class="text-3xl text-center sm:text-4xl lg:text-5xl header">
+            Professional <span class="font-medium text-[#CD5FF8]">Skillset</span>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-center gap-3 skills">
+            <div *ngFor="let skill of skills"
+                class="w-28 sm:w-40 md:w-56 h-16 sm:h-20 md:h-32 flex items-center justify-center rounded-lg bg-transparent border-2 border-[#5A366D] transition-transform duration-300 ease-out hover:-translate-y-2 cursor-pointer">
+
+                <!-- Font Awesome icons -->
+                <fa-icon *ngIf="skill.type === 'fa'" [icon]="skill.icon"
+                    class="text-3xl sm:text-5xl md:text-7xl"></fa-icon>
+
+                <!-- Simple Icons (use img/svg rendering) -->
+                <img *ngIf="skill.type === 'si'" [src]="skill.icon" class="w-7 sm:w-12 h-7 sm:h-12 md:w-20 md:h-20">
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="flex flex-col items-center justify-center gap-6 py-10 codeing-days">
+        <div class="text-3xl text-center sm:text-4xl lg:text-5xl header">
+            <span class="font-medium text-[#CD5FF8]">Tools</span> I Use
+        </div>
+
+        <div class="flex flex-wrap items-center justify-center gap-5 skills">
+            <div *ngFor="let tool of tools"
+                class="w-28 sm:w-40 md:w-56 h-16 sm:h-20 md:h-32  flex items-center justify-center rounded-lg bg-transparent border-2 border-[#5A366D] cursor-pointer transition-transform duration-300 ease-out hover:-translate-y-2">
+
+                <!-- Simple Icons (use img/svg rendering) -->
+                <img *ngIf="tool.type === 'si'" [src]="tool.icon" class="w-7 sm:w-12 h-7 sm:h-12 md:w-20 md:h-20">
+            </div>
+
+        </div>
+    </div>
+
+    <div class="flex flex-col items-center justify-center gap-6 py-10 tools">
+        <div class="text-3xl text-center sm:text-4xl lg:text-5xl header">
+            Days I <span class="font-medium text-[#CD5FF8]">Code</span>
+        </div>
+        <div class="max-w-full w-fit">
+            <!-- Month labels -->
+            <div class="grid pb-3 text-sm text-gray-400 gap-x-2 sm:gap-x-3 md:gap-x-4 lg:gap-x-6 xl:gap-x-8"
+                [ngStyle]="{'grid-template-columns': 'repeat(12, 1fr)'}">
+                <div *ngFor="let month of months" class="text-center whitespace-nowrap">
+                    {{ month }}
+                </div>
+            </div>
+
+            <!-- Contribution grid -->
+            <div class="grid gap-0.5 sm:gap-1 md:gap-1.5 lg:gap-2 xl:gap-2.5"
+                [ngStyle]="{'grid-template-columns': 'repeat(' + weeks.length + ', minmax(0, 1fr))'}">
+                <div *ngFor="let week of weeks" class="flex flex-col gap-0.5 sm:gap-1 md:gap-1.5 lg:gap-2 xl:gap-2.5">
+                    <div *ngFor="let day of week" class="rounded-sm
+                  w-1.5 h-1.5 sm:w-2 sm:h-2 md:w-2.5 md:h-2.5 lg:w-3 lg:h-3 xl:w-3.5 xl:h-3.5"
+                        [ngClass]="getColor(day.commits)">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+</div>

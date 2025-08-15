@@ -1,0 +1,69 @@
+<nav
+  class="fixed top-0 left-0 z-50 flex items-center justify-between w-full px-8 py-6 text-white transition-all duration-300 sm:px-16 lg:px-28"
+  [ngClass]="scrolled ? 'bg-[rgba(20,20,27,0.4)] backdrop-blur-xl  shadow-lg'  : 'bg-transparent'">
+
+  <!-- Logo -->
+  <a routerLink="/" class="font-knewave text-2xl text-[#BD0AF4] cursor-pointer">RR.</a>
+
+  <!-- Desktop Menu -->
+  <div class="items-center hidden gap-5 lg:gap-10 md:flex">
+    <a routerLink="/" class="relative flex gap-2 px-2 py-1 overflow-hidden rounded cursor-pointer group">
+      <fa-icon [icon]="faHome" class="z-10 self-center text-base"></fa-icon>
+      <div class="z-10 text-xl">Home</div>
+      <span
+        class="absolute inset-0 transition-transform duration-300 origin-left scale-x-0 bg-purple-500 group-hover:scale-x-100 -z-10"></span>
+    </a>
+
+    <a routerLink="/about" class="relative flex gap-2 px-2 py-1 overflow-hidden rounded cursor-pointer group">
+      <fa-icon [icon]="faUser" class="z-10 self-center text-base"></fa-icon>
+      <div class="z-10 text-xl">About</div>
+      <span
+        class="absolute inset-0 transition-transform duration-300 origin-left scale-x-0 bg-purple-500 group-hover:scale-x-100 -z-10"></span>
+    </a>
+
+    <a routerLink="/projects" class="relative flex gap-2 px-2 py-1 overflow-hidden rounded cursor-pointer group">
+      <fa-icon [icon]="faBriefcase" class="z-10 self-center text-base"></fa-icon>
+      <div class="z-10 text-xl">Projects</div>
+      <span
+        class="absolute inset-0 transition-transform duration-300 origin-left scale-x-0 bg-purple-500 group-hover:scale-x-100 -z-10"></span>
+    </a>
+
+    <a routerLink="/resume" class="relative flex gap-2 px-2 py-1 overflow-hidden rounded cursor-pointer group">
+      <fa-icon [icon]="faFileAlt" class="z-10 self-center text-base"></fa-icon>
+      <div class="z-10 text-xl">Resume</div>
+      <span
+        class="absolute inset-0 transition-transform duration-300 origin-left scale-x-0 bg-purple-500 group-hover:scale-x-100 -z-10"></span>
+    </a>
+
+    <a href="https://github.com/raulrivas276" target="_blank"
+      class="flex px-3 py-2 bg-[#7d4b9f] hover:bg-[#9466b8] cursor-pointer rounded-lg transition duration-500 hover:-translate-y-1">
+      <fa-icon [icon]="faGithub" class="self-center text-base"></fa-icon>
+    </a>
+
+  </div>
+
+  <!-- Mobile Burger -->
+  <button class="text-2xl md:hidden" (click)="toggleMenu()">
+    <fa-icon [icon]="faBars"></fa-icon>
+  </button>
+</nav>
+
+<!-- Mobile Menu Dropdown -->
+<div *ngIf="isMenuOpen"
+  class="flex flex-col items-center md:hidden mt-10 bg-[rgba(20,20,27,0.95)] px-6 py-4 gap-4 shadow-lg -mb-16">
+  <a routerLink="/" (click)="toggleMenu()" class="flex items-center gap-2">
+    <fa-icon [icon]="faHome"></fa-icon> Home
+  </a>
+  <a routerLink="/about" (click)="toggleMenu()" class="flex items-center gap-2">
+    <fa-icon [icon]="faUser"></fa-icon> About
+  </a>
+  <a routerLink="/projects" (click)="toggleMenu()" class="flex items-center gap-2">
+    <fa-icon [icon]="faBriefcase"></fa-icon> Projects
+  </a>
+  <a routerLink="/resume" (click)="toggleMenu()" class="flex items-center gap-2">
+    <fa-icon [icon]="faFileAlt"></fa-icon> Resume
+  </a>
+  <a href="https://github.com/raulrivas276" target="_blank" class="flex items-center gap-2">
+    <fa-icon [icon]="faGithub"></fa-icon> GitHub
+  </a>
+</div>

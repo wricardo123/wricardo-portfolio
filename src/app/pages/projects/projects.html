@@ -1,0 +1,46 @@
+<div class="flex flex-col items-center justify-center gap-12 px-8 pb-20 lg:px-20 pt-28 projects-page">
+    <div class="flex flex-col items-center justify-center gap-3 left-sec">
+        <div class="text-3xl text-center md:text-4xl header">
+            My recent <span class="text-[#CD5FF8]">Works</span>
+        </div>
+
+        <div class="text-base md:text-lg">
+            Here are a few projects I have worked on recently.
+        </div>
+    </div>
+
+    <div class="flex flex-wrap items-center justify-center w-full gap-8 lg:gap-12 xl:gap-16 projects">
+        <div *ngFor="let proj of projects" class="card flex flex-col gap-5 items-center justify-center px-3 py-10 rounded-lg bg-transparent w-full md:w-1/3 lg:w-1/4 
+         border border-[#9466B8] shadow-[0_0_10px_#9466B8] transition-all duration-300 
+         hover:shadow-[0_0_20px_#9466B8] hover:scale-105 hover:-translate-y-1">
+            <div class="w-[85%] h-auto image rounded-xl overflow-hidden shadow-lg shadow-purple-500/30 hover:shadow-purple-500/50 transition duration-500">
+    <img [src]="proj.image" alt="" class="w-full h-auto rounded-xl">
+</div>
+
+            <div class="flex flex-col items-center justify-center gap-3 details">
+                <div class="text-xl name">
+                    {{proj.name}}
+                </div>
+                <div class="text-lg text-justify desc">
+                    {{proj.desc}}
+                </div>
+                <div class="flex items-center justify-center gap-2 btns">
+                    <a [href]="proj.github" target="_blank" rel="noopener noreferrer"
+                        class="btn flex justify-center items-center gap-2 bg-[#442A63] hover:bg-[#5F1DAA] cursor-pointer rounded-lg p-3">
+                        <fa-icon [icon]="faGithub"></fa-icon>
+                        <div class="">
+                            Github
+                        </div>
+                    </a>
+                    <a [href]="proj.demo" target="_blank" rel="noopener noreferrer"
+                        class="btn flex justify-center items-center gap-2 bg-[#442A63] hover:bg-[#5F1DAA] cursor-pointer rounded-lg p-3">
+                        <fa-icon [icon]="faDisplay"></fa-icon>
+                        <div class="">
+                            Demo
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

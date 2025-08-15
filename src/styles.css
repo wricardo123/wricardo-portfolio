@@ -1,0 +1,35 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Make the app stretch full height */
+html, body { height: 100%; }
+
+/* Optional: set default text color for the site */
+body { @apply text-white; }
+
+/* Starfield helpers */
+@layer utilities {
+  .starfield {
+    @apply fixed inset-0 pointer-events-none overflow-hidden;
+  }
+  .star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    border-radius: 9999px;
+    background: white;
+    opacity: 0.6;
+  }
+}
+
+footer {
+  position: relative; /* creates its own stacking context */
+  background-color: #0A0416; /* solid background */
+  z-index: 10; /* put it above starfield */
+}
+.starfield {
+  z-index: 0; /* keep stars behind everything else */
+}
+
