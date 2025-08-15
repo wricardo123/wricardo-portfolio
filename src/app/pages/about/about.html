@@ -79,25 +79,26 @@
             Days I <span class="font-medium text-[#CD5FF8]">Code</span>
         </div>
         <div class="max-w-full w-fit">
-            <!-- Month labels -->
-            <div class="grid pb-3 text-sm text-gray-400 gap-x-2 sm:gap-x-3 md:gap-x-4 lg:gap-x-6 xl:gap-x-8"
-                [ngStyle]="{'grid-template-columns': 'repeat(12, 1fr)'}">
-                <div *ngFor="let month of months" class="text-center whitespace-nowrap">
-                    {{ month }}
-                </div>
-            </div>
+    <!-- Month labels -->
+    <div class="grid pb-2 text-[10px] sm:text-xs text-gray-400 gap-x-1 sm:gap-x-2 md:gap-x-4 lg:gap-x-6 xl:gap-x-8"
+        [ngStyle]="{'grid-template-columns': 'repeat(12, 1fr)'}">
+        <div *ngFor="let month of months" class="text-center whitespace-nowrap">
+            {{ month }}
+        </div>
+    </div>
 
-            <!-- Contribution grid -->
-            <div class="grid gap-0.5 sm:gap-1 md:gap-1.5 lg:gap-2 xl:gap-2.5"
-                [ngStyle]="{'grid-template-columns': 'repeat(' + weeks.length + ', minmax(0, 1fr))'}">
-                <div *ngFor="let week of weeks" class="flex flex-col gap-0.5 sm:gap-1 md:gap-1.5 lg:gap-2 xl:gap-2.5">
-                    <div *ngFor="let day of week" class="rounded-sm
-                  w-1.5 h-1.5 sm:w-2 sm:h-2 md:w-2.5 md:h-2.5 lg:w-3 lg:h-3 xl:w-3.5 xl:h-3.5"
-                        [ngClass]="getColor(day.commits)">
-                    </div>
-                </div>
+    <!-- Contribution grid -->
+    <div class="grid gap-[1px] sm:gap-0.5 md:gap-1 lg:gap-2 xl:gap-2.5"
+        [ngStyle]="{'grid-template-columns': 'repeat(' + weeks.length + ', minmax(0, 1fr))'}">
+        <div *ngFor="let week of weeks" class="flex flex-col gap-[1px] sm:gap-0.5 md:gap-1 lg:gap-2 xl:gap-2.5">
+            <div *ngFor="let day of week" 
+                class="rounded-sm w-1 h-1 sm:w-1.5 sm:h-1.5 md:w-2 md:h-2 lg:w-3 lg:h-3 xl:w-3.5 xl:h-3.5"
+                [ngClass]="getColor(day.commits)">
             </div>
         </div>
+    </div>
+</div>
+
 
 
 
