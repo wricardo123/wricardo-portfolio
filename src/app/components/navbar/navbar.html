@@ -49,8 +49,9 @@
 </nav>
 
 <!-- Mobile Menu Dropdown -->
-<div *ngIf="isMenuOpen"
-  class="flex flex-col items-center md:hidden mt-10 bg-[rgba(20,20,27,0.95)] px-6 py-4 gap-4 shadow-lg -mb-16">
+<!-- Mobile Menu Dropdown -->
+<div *ngIf="isMenuOpen" #mobileMenu
+  class="fixed top-0 left-0 w-full flex flex-col items-center md:hidden bg-[rgba(20,20,27,0.95)] px-6 py-4 gap-4 shadow-lg z-[1000]">
   <a routerLink="/" (click)="toggleMenu()" class="flex items-center gap-2">
     <fa-icon [icon]="faHome"></fa-icon> Home
   </a>

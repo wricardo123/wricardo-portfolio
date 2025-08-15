@@ -3,7 +3,9 @@ import { NgFor, NgIf, NgClass, NgStyle } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faRocket } from '@fortawesome/free-solid-svg-icons';
 import { faJs, faNodeJs, faReact, faGithub, faPython, faJava } from '@fortawesome/free-brands-svg-icons';
-import { siCplusplus, siGo, siMongodb, siNextdotjs, siAngular, siPostgresql, siMysql, siMacos, siVercel, siSlack, siPostman } from 'simple-icons/icons';
+import { siWordpress, siPhp, siLaravel, siHtml5, siCss, siMariadb, siGit, siWoo, siJquery, siFigma, siDocker, siApachespark, siMysql } from 'simple-icons/icons'; 
+// Note: siApachespark is placeholder for APIs/WebSockets – choose relevant if exists
+
 
 
 @Component({
@@ -14,28 +16,29 @@ import { siCplusplus, siGo, siMongodb, siNextdotjs, siAngular, siPostgresql, siM
 })
 export class About {
   faRocket = faRocket
-  skills = [
+    skills = [
     { type: 'fa', icon: faJs },
     { type: 'fa', icon: faReact },
     { type: 'fa', icon: faGithub },
-    { type: 'fa', icon: faPython },
-    { type: 'fa', icon: faJava },
-    { type: 'fa', icon: faNodeJs },
-    { type: 'si', icon: this.siToDataUrl(siCplusplus) },
-    { type: 'si', icon: this.siToDataUrl(siGo) },
-    { type: 'si', icon: this.siToDataUrl(siMongodb) },
-    { type: 'si', icon: this.siToDataUrl(siNextdotjs) },
-    { type: 'si', icon: this.siToDataUrl(siAngular) },
-    { type: 'si', icon: this.siToDataUrl(siPostgresql) },
-    { type: 'si', icon: this.siToDataUrl(siMysql) },
+    { type: 'si', icon: this.siToDataUrl(siPhp) },
+    { type: 'si', icon: this.siToDataUrl(siWordpress) },
+    { type: 'si', icon: this.siToDataUrl(siLaravel) },
+    { type: 'si', icon: this.siToDataUrl(siHtml5) },
+    { type: 'si', icon: this.siToDataUrl(siCss) },
+    { type: 'si', icon: this.siToDataUrl(siJquery) }
   ];
 
   tools = [
-    { type: 'si', icon: this.siToDataUrl(siMacos) },
-    { type: 'si', icon: this.siToDataUrl(siVercel) },
-    { type: 'si', icon: this.siToDataUrl(siSlack) },
-    { type: 'si', icon: this.siToDataUrl(siPostman) },
-  ]
+    { type: 'si', icon: this.siToDataUrl(siMariadb) },
+    { type: 'si', icon: this.siToDataUrl(siGit) },
+    { type: 'si', icon: this.siToDataUrl(siWoo) },        // WooCommerce
+    { type: 'si', icon: this.siToDataUrl(siFigma) },
+    { type: 'si', icon: this.siToDataUrl(siDocker) },
+    // For APIs and WebSockets, you'd need to choose specific icons if available
+    // Example placeholder; replace with real Simple Icon name:
+    // { type: 'si', icon: this.siToDataUrl(siApis) },
+    // { type: 'si', icon: this.siToDataUrl(siWebsockets) },
+  ];
 
   private siToDataUrl(icon: any): string {
     // Inject white fill into the SVG string

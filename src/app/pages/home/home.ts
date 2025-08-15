@@ -31,9 +31,7 @@ export class Home {
   text = '';
   longestLength = 0;
   private words = [
-    'Full Stack Developer',
-    'Mern Stack Developer',
-    'Mean Stack Developer',
+    'Full Stack WordPress Developer'
   ];
   private i = 0;
   private j = 0;

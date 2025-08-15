@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, ElementRef, ViewChild } from '@angular/core';
 import { NgIf } from '@angular/common';
 import { NgClass } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
@@ -22,6 +22,9 @@ export class Navbar {
 
   scrolled = false;
 
+  @ViewChild('mobileMenu') mobileMenu!: ElementRef;
+
+
   @HostListener('window:scroll', [])
   onWindowScroll() {
     this.scrolled = window.scrollY > 50;
@@ -31,6 +34,14 @@ export class Navbar {
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  // Listen for clicks anywhere in the document
+  @HostListener('document:click', ['$event'])
+  handleClickOutside(event: Event) {
+    if (this.isMenuOpen && this.mobileMenu && !this.mobileMenu.nativeElement.contains(event.target)) {
+      this.isMenuOpen = false;
+    }
   }
 
 }
